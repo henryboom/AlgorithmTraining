@@ -1487,3 +1487,61 @@ print(dfs())
 
 
 
+## 成绩统计
+
+### 问题描述:
+
+编写一个程序，建立一个字典，每个字典包含姓名、学号、英语成绩、数学成绩和C++成绩，并通过字典操作平均分最高的学生和平均分最低的学生并且输出。
+输入格式：
+输入n+1行，第一行输入一个正整数n，表示学生数量；接下来的n行每行输入5个数据，分别表示姓名、学号、英语成绩、数学成绩和C++成绩。注意成绩有可能会有小数。
+输出格式：
+输出两行，第一行输出平均成绩最高的学生姓名。第二行输出平均成绩最低的学生姓名。
+样例输入
+2
+yx1 1 45 67 87
+yx2 2 88 90 99
+样例输出：
+yx2
+yx1
+
+### 思路：
+
+使用一个字典的数组，元素为字典，存储对应的列信息
+
+~~~
+list_dict = [{} for i in range(100)]
+maxx, minn = 0, 301
+maxs, mins = "", ""
+summ = 0
+num = int(input())
+for i in range(0, num):
+    list_dict[i]["xm"], list_dict[i]["xh"], list_dict[i]["yy"], list_dict[i]["sx"], list_dict[i]["cpp"] = input().split()
+for j in range(0, num):
+    summ = float(list_dict[j]["yy"]) + float(list_dict[j]["sx"]) + float(list_dict[j]["cpp"])
+    if summ >= maxx:
+        maxx = summ
+        maxs = list_dict[j]["xm"]
+    if summ < minn:
+        minn = summ
+        mins = list_dict[j]["xm"]
+print(maxs)
+print(mins)
+~~~
+
+## 大衍数列
+
+中国古代文献中，曾记载过“大衍数列”, 主要用于解释中国传统文化中的太极衍生原理。
+ 它的前几项是：0、2、4、8、12、18、24、32、40、50 …
+ 其规律是：对偶数项，是序号平方再除2，奇数项，是序号平方减1再除2。
+ 以下的代码打印出了大衍数列的前 100 项。
+
+~~~
+for i in range(1, 101):
+    if i % 2 == 0:
+        print("%d " % int((i**2) / 2))
+    else:
+        print("%d " % int((i**2 - 1) / 2))
+~~~
+
+
+
