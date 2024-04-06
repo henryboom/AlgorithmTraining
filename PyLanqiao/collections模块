@@ -1,0 +1,8 @@
+import collections
+
+collections.deque([])
+q = collections.deque([1, 2, 3, 4])
+q.rotate(1)
+print(q)  # [4, 1, 2, 3]
+q.rotate(1)
+print(q)  # [3, 4, 1, 2]

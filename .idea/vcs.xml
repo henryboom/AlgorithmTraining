@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PyLanqiao/2023_Lanqiao_Cup" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PyLanqiao/My-Algorithm-Practice" vcs="Git" />
   </component>
 </project>
