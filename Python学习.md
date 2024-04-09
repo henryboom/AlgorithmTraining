@@ -1164,9 +1164,31 @@ int,bool,str,list,tuple,dict,set,float,None
 12345678910
 ```
 
+#### defaultdict 
+
+`defaultdict` 和 `{}`（字典）的主要区别在于处理不存在的键时的行为。
+
+1. **字典 `{}`：** 在使用字典时，如果访问了不存在的键，会抛出 KeyError 异常。
+
+```python
+
+my_dict = {}
+print(my_dict['key'])  # KeyError: 'key' 不存在
+```
+
+1. **defaultdict：** `defaultdict` 是 `collections` 模块提供的一个类，它是字典的一个子类。与普通字典不同，当使用 `defaultdict` 时，如果访问了不存在的键，它会自动创建一个默认值，并返回该默认值。这个默认值的类型由你指定的工厂函数决定。
+
+```python
+
+from collections import defaultdict
+
+my_defaultdict = defaultdict(int)  # 使用 int 作为默认值的工厂函数
+print(my_defaultdict['key'])  # 输出: 0，因为 int() 的默认值为 0
+```
+
+因此，`defaultdict` 的一个主要优点是，在处理不存在的键时，不会引发 KeyError 异常，而是返回一个默认值。
+
 ## **datetime模块**
-
-
 
 #### 获取当前日期和时间
 
@@ -2861,7 +2883,7 @@ time_list=[]
 # 打开文件 "12.txt"，以只读方式读取，使用 "with" 语句保证文件在使用后自动关闭
 
 
-time_list[]
+#time_list[]
 with open("12.txt","r") as f:
 	for time in  f.readlines():
 		time_list.append(time .strip())  #移除字符串首尾字符
@@ -2929,7 +2951,7 @@ print(ans)
 
 问题描述
 
-有一个长度为 nn 的 0101 串，其中有一些位置标记为 ??，这些位置上可以任意填充 00 或者 11，请问如何填充这些位置使得这个 0101 串中出现互不重叠的 0000 和 1111 子串最多，输出子串个数。
+有一个长度为 n 的 0101 串，其中有一些位置标记为 ?，这些位置上可以任意填充 0 或者 1，请问如何填充这些位置使得这个 01 串中出现互不重叠的 00 和 11 子串最多，输出子串个数。
 
 输入格式
 
@@ -2953,11 +2975,11 @@ print(ans)
 
 样例说明
 
-如果在问号处填 00 ，则最多出现一个 0000 和一个 1111：111000111000。
+如果在问号处填 0 ，则最多出现一个 00 和一个 111000。
 
 评测用例规模与约定
 
-对于所有评测用例，1≤n≤1061≤n≤106。
+对于所有评测用例，1≤n≤106 
 
 
 
@@ -3588,4 +3610,68 @@ else:
     # 因为题目要求说了，相遇就会转向，那么我们想象成相遇就会擦肩而过，而感冒的会被感染，这样就能解释通了，无论怎么走，两个对向移动的蚂蚁都会感冒，而反向的蚂蚁直接就安全的出去 了
 
 ~~~
+
+##  阶乘的和      
+
+ ![image-20240409105643077](http://battle.wicp.io:9001/blog1/202404091056441.png)
+
+### 思路
+
+最小的 那个Ai肯定是公因子，但是要防止合成，也就是三个2！可以合成一个3!，这个时候因数最大就可以是3！了
+
+样例也给出了提示，所以要考虑这种情况
+
+~~~
+import os
+import sys
+
+from collections import defaultdict
+import os
+import sys
+
+n = int(input())
+a = list(map(int, input().split()))
+a.sort()
+Map = defaultdict(int)
+
+for i in a:
+    Map[i] += 1
+
+m = a[0]  # 最开始一定可以合成
+while True:
+    x = Map[m]
+    if x % (m + 1) == 0:
+        Map[m + 1] += x // (m + 1)
+        m += 1
+    else:
+        break
+
+print(m)
+
+
+~~~
+
+### 使用defaultdict
+
+`defaultdict` 和 `{}`（字典）的主要区别在于处理不存在的键时的行为。
+
+1. **字典 `{}`：** 在使用字典时，如果访问了不存在的键，会抛出 KeyError 异常。
+
+```python
+
+my_dict = {}
+print(my_dict['key'])  # KeyError: 'key' 不存在
+```
+
+1. **defaultdict：** `defaultdict` 是 `collections` 模块提供的一个类，它是字典的一个子类。与普通字典不同，当使用 `defaultdict` 时，如果访问了不存在的键，它会自动创建一个默认值，并返回该默认值。这个默认值的类型由你指定的工厂函数决定。
+
+```python
+
+from collections import defaultdict
+
+my_defaultdict = defaultdict(int)  # 使用 int 作为默认值的工厂函数
+print(my_defaultdict['key'])  # 输出: 0，因为 int() 的默认值为 0
+```
+
+因此，`defaultdict` 的一个主要优点是，在处理不存在的键时，不会引发 KeyError 异常，而是返回一个默认值。
 
