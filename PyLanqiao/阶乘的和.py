@@ -1,26 +1,29 @@
+from collections import defaultdict
 
 
-import os
-import sys
+def find_largest_divisible_subset(n, a):
+    a.sort()
+    count_map = defaultdict(int)
 
-from collections import  defaultdict
+    for num in a:
+        count_map[num] += 1
 
-#接收一个参数n
+    max_num = a[0]
 
-n=int(input())
+    while True:
+        count = count_map[max_num]
+        if count % (max_num + 1) == 0:
+            count_map[max_num + 1] = count // (max_num + 1)
+            max_num += 1
+        else:
+            break
 
-a= list(map(int,input().split()))
-
-a.sort()
-
-Map = defaultdict(int )
+    return max_num
 
 
-#进行计数
-for i in a :
-    Map[i]+=1
-m=a[0]
+if __name__ == "__main__":
+    n = int(input("Enter the value of n: "))
+    a = list(map(int, input("Enter the list of numbers separated by space: ").split()))
 
-while True:
-    x=Map[m]
-    if x % (m+1)==0
+    result = find_largest_divisible_subset(n, a)
+    print("The size of the largest divisible subset is:", result)
