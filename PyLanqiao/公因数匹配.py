@@ -1,5 +1,6 @@
 import math
 
+
 def sieve_of_eratosthenes(limit):
     primes = []
     is_prime = [True] * (limit + 1)
@@ -12,6 +13,7 @@ def sieve_of_eratosthenes(limit):
                 is_prime[j] = False
 
     return primes
+
 
 def main():
     n = int(input())
@@ -48,6 +50,7 @@ def main():
             ansj = i
 
     print(ansi, ansj)
+
 
 if __name__ == "__main__":
     main()
