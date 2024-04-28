@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
@@ -27,6 +31,7 @@ class Solution {
             path.add(nums[i]);
             used[i] = true;
             subsetsWithDupHelper(nums, i + 1);
+            //进入另一个分支
             path.removeLast();
             used[i] = false;
         }
