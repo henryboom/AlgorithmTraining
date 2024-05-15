@@ -18,3 +18,6 @@ def call(n):
 n = int(input())
 call(n)
 print(result)
+#写一个循环
+
+
