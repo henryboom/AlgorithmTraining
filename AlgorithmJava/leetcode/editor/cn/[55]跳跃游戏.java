@@ -9,7 +9,7 @@ class Solution {
         for (int i = 0; i <=cover; i++) {//小于等于
             cover=Math.max(nums[i]+i, cover);
             if (cover>=nums.length-1)return true;//表示覆盖到了终点
-
+//
         }
         return false;
     }
