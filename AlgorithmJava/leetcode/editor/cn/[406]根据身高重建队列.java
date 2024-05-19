@@ -13,6 +13,7 @@ class Solution {
                 return a[1]-b[1];//前减去后是升序排列
 
             }
+            //第二位升序排列
             return  b[0]-a[0];
         });
         LinkedList<int[]> que = new LinkedList<>();
