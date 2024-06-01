@@ -11,7 +11,7 @@ class Solution {
         int start = intervals[0][0];
         //最大右边界
         int rightmostRightBound = intervals[0][1];//默认第一个
-
+//
         for (int i = 1; i < intervals.length; i++) {
             //如果左边界限 大于 最大 的右边界
             if (intervals[i][0] > rightmostRightBound){
