@@ -10,7 +10,7 @@ class Solution {
         for (int num : nums) {
             sum += num;
         }
-
+//
         //求和为奇数，不能平分
         if (sum % 2 != 0) {
             return false;
