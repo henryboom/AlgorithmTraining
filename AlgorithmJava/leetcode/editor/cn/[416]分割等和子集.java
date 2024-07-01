@@ -22,6 +22,7 @@ class Solution {
         }
         return dp[target]==0? false:true;
     }
+    //
 //    public boolean canPartition(int[] nums) {
 //        if (nums == null || nums.length == 0) return false;
 //        int n = nums.length;
