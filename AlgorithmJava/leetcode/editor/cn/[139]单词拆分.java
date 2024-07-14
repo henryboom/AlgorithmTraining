@@ -9,7 +9,7 @@ class Solution {
         for (int i = 1; i <= s.length(); i++) {
             for (int j = 0; j < i && !valid[i]; j++) {
                 if (set.contains(s.substring(j, i)) && valid[j]) {
-                    valid[i] = true;
+                    valid[i] = true;//
                 }
             }
         }
