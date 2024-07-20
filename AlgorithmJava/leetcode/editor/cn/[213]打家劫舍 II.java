@@ -9,7 +9,7 @@ class Solution {
             return nums[0];
         return Math.max(robAction(nums, 0, len - 1), robAction(nums, 1, len));
     }
-
+//
     int robAction(int[] nums, int start, int end) {
         int x = 0, y = 0, z = 0;
         for (int i = start; i < end; i++) {
