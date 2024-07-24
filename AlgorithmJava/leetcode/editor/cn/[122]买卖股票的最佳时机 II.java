@@ -3,12 +3,19 @@ import static java.lang.Math.max;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int maxProfit(int[] prices) {
-        int result =0;
-
-        for (int i = 1; i < prices.length; i++) {
-            result+=Math.max(prices[i]-prices[i-1],0);
+        if (prices == null || prices.length == 0) return 0;
+        int length = prices.length;
+        // dp[i][0]代表第i天持有股票的最大收益（每次都与上一次持有比较大小，本次买入为-price[i]）
+        // dp[i][1]代表第i天不持有股票的最大收益
+        int[][] dp = new int[length][2];
+        int result = 0;
+        dp[0][0] = -prices[0];
+        dp[0][1] = 0;
+        for (int i = 1; i < length; i++) {
+            dp[i][0] = Math.max(dp[i - 1][0], dp[i-1][1]-prices[i]);//要么继续持有，要么就买，结果均是持有中
+            dp[i][1] = Math.max(dp[i - 1][0] + prices[i], dp[i - 1][1]);//要么卖了，要么就继续观望不买入
         }
-        return result;
+        return dp[length - 1][1];
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
