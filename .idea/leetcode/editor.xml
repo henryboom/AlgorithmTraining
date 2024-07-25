@@ -3,6 +3,17 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[123]买卖股票的最佳时机 III.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/doc/content/[123]买卖股票的最佳时机 III.md" />
+              <option name="frontendQuestionId" value="leetcode.cn123" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[123]买卖股票的最佳时机 III.java" />
+              <option name="titleSlug" value="best-time-to-buy-and-sell-stock-iii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[239]滑动窗口最大值.java">
           <value>
             <LeetcodeEditor>
