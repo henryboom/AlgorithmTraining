@@ -2,7 +2,8 @@ import java.util.Map;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public int maxSubArray(int[] nums) {
+    //贪心
+    public int maxSubArray1(int[] nums) {
 
         //长度为一直接返回
     if(nums.length==1){
@@ -20,5 +21,26 @@ class Solution {
         }
         return sum;
     }
+
+
+
+
+    //dp
+    public static int maxSubArray(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+
+        int res = nums[0];
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            //要么接着追加，要么从当前从新开始新的子数组
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+            res = res > dp[i] ? res : dp[i];
+        }
+        return res;
+    }
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
