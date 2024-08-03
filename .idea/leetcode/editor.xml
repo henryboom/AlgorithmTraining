@@ -80,6 +80,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[392]判断子序列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/doc/content/[392]判断子序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn392" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[392]判断子序列.java" />
+              <option name="titleSlug" value="is-subsequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[416]分割等和子集.java">
           <value>
             <LeetcodeEditor>
