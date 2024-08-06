@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[115]不同的子序列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/doc/content/[115]不同的子序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn115" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[115]不同的子序列.java" />
+              <option name="titleSlug" value="distinct-subsequences" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/AlgorithmJava/leetcode/editor/cn/[123]买卖股票的最佳时机 III.java">
           <value>
             <LeetcodeEditor>
