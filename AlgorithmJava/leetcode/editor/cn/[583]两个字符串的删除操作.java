@@ -11,7 +11,7 @@ class Solution {
             for (int j = 1; j < word2.length() + 1; j++) {
                 if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
                     dp[i][j] = dp[i - 1][j - 1];
-                }else{
+                }else{//
                     dp[i][j] = Math.min(dp[i - 1][j - 1] + 2,
                             Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1));
                 }
