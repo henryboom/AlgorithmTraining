@@ -12,7 +12,7 @@ class Solution {
         for (int j = 1; j <= n; j++) {
             dp[0][j] = j;
         }
-        for (int i = 1; i <= m; i++) {
+        for (int i = 1; i <= m; i++) {//
             for (int j = 1; j <= n; j++) {
                 // 因为dp数组有效位从1开始
                 // 所以当前遍历到的字符串的位置为i-1 | j-1
